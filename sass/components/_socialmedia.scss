@@ -1,0 +1,33 @@
+.socialmedia {
+
+&__icon {
+
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+    margin: auto;
+}
+&__list {
+    display: flex;     
+}
+&__list :not(:last-child) {
+    margin-right: 10px;
+}
+&__link{
+    display: block;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    justify-content: center;
+    color: var(--icon-color);
+    border-radius: 50%;
+    transition: fill 250ms var(--timing-function), background-color 250ms var(--timing-function);
+    
+ }
+ &__link:focus,
+ &__link:hover {
+     background: var(--accent-color);
+     color: var(--while-color);
+   
+ }
+}

@@ -1,0 +1,14 @@
+.header 
+{
+     
+     background-color: var(--while-color);
+     color: var(--first-color);
+     font-weight: 500;
+     font-size: 14px;
+     border-bottom: solid 1px var(--border-color);
+ 
+&__container {
+    display: flex;
+    box-sizing: border-box;
+}
+}

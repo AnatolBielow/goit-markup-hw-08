@@ -1,0 +1,33 @@
+.contacts {
+
+
+&__list {
+    display: flex;
+}
+
+&__list :not(:last-child) {
+    margin-right: 30px;
+
+}
+&__link {
+    display: flex;
+    padding: 32px 0;
+    color: var(--second-color);
+    transition: color 250ms var(--timing-function);
+}
+
+&__icon {
+    display: block;
+    margin: auto 10px auto 0;
+    fill: currentColor;
+}
+
+
+&__link:hover,
+&__link:focus{
+    color: var(--accent-color);   
+}
+}
+.active{
+   color: var(--accent-color);
+}

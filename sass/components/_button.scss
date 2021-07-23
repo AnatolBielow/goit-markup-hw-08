@@ -1,0 +1,27 @@
+.button {
+    width: 200px;
+    height: 50px;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.875;
+    letter-spacing: 0.06em;
+    color: var(--first-color);
+    border: 0;
+    border-radius: 4px;
+    cursor: pointer;   
+    transition: background-color 250ms var(--timing-function),
+    color 250ms var(--timing-function),
+    box-shadow 250ms var(--timing-function); 
+
+&__sign-in {
+    background-color: var(--accent-color);
+    color: var(--while-color);
+ 
+}
+&__sign-in:hover,
+&__sign-in:focus {
+    background-color: var(--button-hover);
+}
+
+
+}

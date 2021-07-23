@@ -1,0 +1,43 @@
+.features {
+
+
+&__section {
+    font-size: 14px;
+    letter-spacing: 0.03em;
+    line-height: 1.714;
+    color: var(--second-color);    
+}
+&__title {
+    color: transparent;
+    font-size: 0;
+}    
+&__list {
+    display: flex;
+}
+&__item:not(:last-child) {
+    margin-right: 30px;
+}
+ 
+&__icon-container {
+    display: flex;
+    justify-content: center;
+    width: 270px;
+    height: 120px;
+    background-color: var(--backgroung-team-color);
+    margin-bottom: 30px;
+}
+ 
+&__icon {
+    margin: auto;
+    width: 70px;
+    height: 70px;
+
+}
+&__name {
+    font-size: 14px;
+    font-weight: bold;
+    color: var(--first-color);
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+}

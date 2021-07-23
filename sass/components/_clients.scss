@@ -1,0 +1,72 @@
+.clients {
+
+&__title {
+    color: var(--first-color);
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 50px;
+    text-align: center;
+}
+&__list  {
+    display: inline-flex;
+} 
+&__list :not(:last-child) {
+   margin-right: 30px;
+}   
+    
+
+
+&__link{
+    display: flex;
+    justify-content: center;
+ 
+    width: 170px;
+    height: 92px;
+    color: var(--icon-color);
+    border: 1px solid var(--icon-color);
+    border-radius: 4px;
+    transition: color 250ms var(--timing-function), border-color 250ms var(--timing-function);
+
+}
+&__link:hover,
+&__link:focus {
+    border-color: var(--accent-color);
+    color: var(--accent-color);
+}
+/*----------Company Logo----- */
+
+
+&__icon {
+    fill: currentColor;
+    margin: auto; 
+}
+&__icon--group1 {
+    width: 41px;
+    height: 46.7px;
+
+}
+&__icon--group2 {
+    width: 40px;
+    height: 52px;
+}
+
+&__icon--group3 {
+    width: 43.46px;
+    height: 41.18px;
+}
+
+&__icon--group4 {
+    width: 84.44px;
+    height: 40.62px;
+}
+
+&__icon--group5 {
+    width: 62.54px;
+    height: 45.43px;
+}
+
+&__icon--group6 {
+    width: 93.79px;
+    height: 43.93px;
+}
+}

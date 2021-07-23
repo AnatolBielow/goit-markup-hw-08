@@ -1,0 +1,22 @@
+.logo {
+    font-family: var(--logo-font);
+    color: var(--accent-color);
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+ 
+}
+
+.logo--header {
+    padding-top: 24px;
+    padding-bottom: 25px;
+    margin-right: 93px;
+}
+.logo__mod--header {
+    color: var(--logo-header-color);
+}
+
+
+.logo__mod--footer {
+    color: var(--while-color);
+}

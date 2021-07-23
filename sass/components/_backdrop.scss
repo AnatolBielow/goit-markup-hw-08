@@ -1,0 +1,57 @@
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    scale: 1;
+    background-color: rgba(0, 0, 0, 0.2);
+    transition: opacity 250ms var(--timing-function), scale 250ms var(--timing-function);
+
+}
+.backdrop.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+    scale: 0.2;
+}
+.modal {
+    position: absolute;
+    width: 528px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 40px;
+    background-color: var(--while-color);
+}
+
+.close {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.close__icon {
+    width: 18px;
+    height: 18px;
+    fill: currentColor;
+    transition: fill 250ms var(--timing-function);
+}
+
+[data-modal-close] {
+    position: absolute;
+    top: 8px;
+    right: 9px;
+    width: 30px;
+    height: 30px;
+    background-color:var(--while-color);
+    color: var(--logo-header-color);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    transition: color 250ms var(--timing-function);
+}
+
+[data-modal-close]:hover,
+[data-modal-close]:focus {
+    color: var(--accent-color);  
+    cursor: pointer;
+}
