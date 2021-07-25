@@ -1364,7 +1364,7 @@ img {
 }
 
 .mobile__socialmedia-link {
-  font-size: 18px;
+  font-size: 4vw;
   font-weight: 500;
   color: var(--accent-color);
 }
