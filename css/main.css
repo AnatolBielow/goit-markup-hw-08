@@ -20,6 +20,9 @@
   --hero-background: url(../images/background.jpg);
   --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   --modal-label-color: rgba(33, 33, 33, 0.2);
+  --smartphone: 480px;
+  --tablet: 768px;
+  --desktop: 1200px;
 }
 
 /*! modern-normalize v1.1.0 | MIT License | https://github.com/sindresorhus/modern-normalize */
@@ -328,7 +331,7 @@ img {
 }
 
 .container {
-  width: 1200px;
+  width: 100vw;
   padding: 0 15px;
   margin: 0 auto;
 }
@@ -342,9 +345,9 @@ img {
 }
 
 .logo--header {
-  padding-top: 24px;
-  padding-bottom: 25px;
-  margin-right: 93px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  margin-right: auto;
 }
 
 .logo__mod--header {
@@ -413,7 +416,10 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-right: auto;
+  width: 100vw;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .menu__list {
@@ -450,12 +456,24 @@ img {
   transition: opacity 250ms var(--timing-function);
 }
 
+.menu__mobile-icon {
+  width: 24px;
+  height: 16px;
+  fill: currentColor;
+}
+
 .menu__link:hover, .menu__link:focus, .menu__link--active {
   color: var(--accent-color);
 }
 
 .menu__link:hover::after, .menu__link:focus::after, .menu__link--active::after {
   opacity: 1;
+}
+
+@media screen and (max-width: 768px) {
+  .menu__list {
+    display: none;
+  }
 }
 
 .contacts__list {
@@ -490,6 +508,12 @@ img {
 
 .active {
   color: var(--accent-color);
+}
+
+@media screen and (max-width: 768px) {
+  .contacts__list {
+    display: none;
+  }
 }
 
 .envelope {
@@ -1250,5 +1274,120 @@ img {
 .card__link:focus .card__overlay {
   -webkit-transform: translateY(-100%);
           transform: translateY(-100%);
+}
+
+.menu-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  padding: 48px 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: var(--while-color);
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+  -webkit-transition: -webkit-transform 250ms var(--timing-function);
+  transition: -webkit-transform 250ms var(--timing-function);
+  transition: transform 250ms var(--timing-function);
+  transition: transform 250ms var(--timing-function), -webkit-transform 250ms var(--timing-function);
+}
+
+.menu-container.is-open {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+.js-close-menu {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.menu-toggle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: auto;
+  width: 40px;
+  height: 40px;
+  border: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: var(--while-color);
+  cursor: pointer;
+}
+
+@media screen and (min-width: 768px) {
+  .menu-toggle {
+    display: none;
+  }
+}
+
+.mobile__menu-link {
+  font-size: 40px;
+  font-weight: 500;
+  color: var(--first-color);
+  margin-bottom: 32px;
+}
+
+.mobile__tel {
+  font-size: 8vw;
+  font-weight: 500;
+  color: var(--accent-color);
+  margin-bottom: 32px;
+}
+
+.mobile__email {
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 48px;
+}
+
+.mobile__socialmedia-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.mobile__socialmedia-link {
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--accent-color);
+}
+
+.mobile__socialmedia-item:not(:first-child) {
+  padding-left: 10px;
+}
+
+.mobile__socialmedia-item:not(:last-child) {
+  padding-right: 10px;
+  border-right: solid 1px var(--second-color);
+}
+
+.menu-toggle:hover,
+.menu-toggle:focus,
+.menu-toggle:active,
+.mobile__menu-link:hover,
+.mobile__menu-link:focus,
+.mobile__menu-link:active,
+.mobile__menu-link--active,
+.mobile__email:hover,
+.mobile__email:focus,
+.mobile__email:active {
+  color: var(--accent-color);
 }
 /*# sourceMappingURL=main.css.map */

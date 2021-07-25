@@ -31,3 +31,9 @@
 .active{
    color: var(--accent-color);
 }
+@media screen and(max-width: 768px) {
+    .contacts__list {
+        display: none;
+    }
+    
+}

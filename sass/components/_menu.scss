@@ -1,7 +1,8 @@
 .menu {
 
     display: flex;
-    margin-right: auto;
+    width: 100vw;
+    align-items: center;
 
 &__list {
     display: flex;
@@ -32,7 +33,11 @@
     opacity: 0;
     transition: opacity 250ms var(--timing-function);
 }
-
+&__mobile-icon {
+    width: 24px;
+    height: 16px;
+    fill: currentColor;
+}
 &__link:hover,
 &__link:focus,
 &__link--active {
@@ -44,4 +49,10 @@
 &__link--active::after {
     opacity: 1;
 }
+}
+@media screen and (max-width: 768px) {
+    .menu__list {
+        display: none;
+    }
+    
 }
