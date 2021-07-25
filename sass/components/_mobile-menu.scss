@@ -2,16 +2,18 @@
     position: absolute;
     top: 0;
     left: 0;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     padding: 48px 40px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    overflow-y: scroll;
+    overflow-x: hidden;
     background-color: var(--while-color);
     transform: translateX(100%);
     transition: transform 250ms var(--timing-function);
-
+ 
     &.is-open {
         transform: translateX(0);
     }
