@@ -1,12 +1,17 @@
 .menu {
 
+<<<<<<< Updated upstream
     display: flex;
     width: 100vw;
     align-items: center;
+=======
+//     display: flex;
+//     margin-right: auto;
+>>>>>>> Stashed changes
 
-&__list {
-    display: flex;
-}
+// &__list {
+//     display: flex;
+// }
 
 &__list :not(:last-child) {
     margin-right: 50px;
