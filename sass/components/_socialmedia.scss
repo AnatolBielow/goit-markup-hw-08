@@ -8,7 +8,8 @@
     margin: auto;
 }
 &__list {
-    display: flex;     
+    display: flex; 
+    justify-content: center;   
 }
 &__list :not(:last-child) {
     margin-right: 10px;

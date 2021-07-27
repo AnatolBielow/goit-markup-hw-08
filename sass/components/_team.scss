@@ -6,16 +6,31 @@
     background-color: var(--backgroung-team-color);
     text-align: center;
  }
- &__list {
-     display: flex;
- }
+ &__container {
+     
+    @media screen and (min-width: 480px)
+    {
+        max-width: 480px;
+    } 
+} 
+&__list {
+    margin-bottom: -30px;
+}
+//      display: flex;
+//  }
 
 &__title {
     color: var(--first-color);
-    font-size: 36px;
+    // ;
     font-weight: 700;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
     text-align: center;
+    font-size: 28px;
+@media screen and (min-width: 1200px)
+{
+    font-size: 36px;
+    margin-bottom: 50px;
+}
 }
 &__item {
     background: var(--while-color);
@@ -23,10 +38,11 @@
     0px 1px 1px rgba(0, 0, 0, 0.14), 
     0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
+    margin-bottom: 30px;
 }
-&__item:not(:last-child) {
-    margin-right: 30px;
-}    
+// &__item:not(:last-child) {
+//     margin-right: 30px;
+ 
 &__item-container {
     padding: 30px 32px;
 } 

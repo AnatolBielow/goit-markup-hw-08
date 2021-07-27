@@ -1,16 +1,24 @@
 .address-box {
- 
-    margin-right: 70px;
+  margin-bottom: 60px;
+      
+  
+// //     margin-right: 70px;
 }
 
 .address {
 
     font-style: normal;
 
+ 
+
+
 &__item {
     margin-bottom: 9px;
-}
 
+    @media screen and (max-width: 767px) {
+    text-align: center;
+}
+}
 
 
 &__link {

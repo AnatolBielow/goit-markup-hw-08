@@ -326,12 +326,12 @@ img {
 }
 
 .section {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 .container {
-  width: 100vw;
+  width: 100%;
   padding: 0 15px;
   margin: 0 auto;
 }
@@ -343,11 +343,15 @@ img {
   font-weight: 700;
   letter-spacing: 0.03em;
 }
+@media screen and (max-width: 768px) {
+  .logo {
+    text-align: center;
+  }
+}
 
 .logo--header {
   padding-top: 15px;
   padding-bottom: 15px;
-  margin-right: auto;
 }
 
 .logo__mod--header {
@@ -368,6 +372,9 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 .socialmedia__list :not(:last-child) {
   margin-right: 10px;
@@ -400,33 +407,14 @@ img {
   border-bottom: solid 1px var(--border-color);
 }
 
-<<<<<<< Updated upstream
-.header__container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
 .menu {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 100vw;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
-
-.menu__list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-=======
->>>>>>> Stashed changes
 .menu__list :not(:last-child) {
   margin-right: 50px;
 }
@@ -452,16 +440,11 @@ img {
   -webkit-transition: opacity 250ms var(--timing-function);
   transition: opacity 250ms var(--timing-function);
 }
-<<<<<<< Updated upstream
-
 .menu__mobile-icon {
   width: 24px;
   height: 16px;
   fill: currentColor;
 }
-
-=======
->>>>>>> Stashed changes
 .menu__link:hover, .menu__link:focus, .menu__link--active {
   color: var(--accent-color);
 }
@@ -474,7 +457,6 @@ img {
     display: none;
   }
 }
-
 .contacts__list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -510,7 +492,6 @@ img {
     display: none;
   }
 }
-
 .envelope {
   width: 16px;
   height: 12px;
@@ -536,13 +517,23 @@ img {
   color: var(--while-color);
   margin: 0 auto;
 }
+@media screen and (min-width: 1200px) {
+  .hero__content {
+    width: 660px;
+  }
+}
 .hero__title {
-  font-size: 44px;
+  font-size: 24px;
   font-weight: 900;
   line-height: 1.363;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   margin-bottom: 30px;
+}
+@media screen and (min-width: 1200px) {
+  .hero__title {
+    font-size: 44px;
+  }
 }
 
 .button {
@@ -569,6 +560,11 @@ img {
   background-color: var(--button-hover);
 }
 
+@media screen and (min-width: 480px) {
+  .features__container {
+    max-width: 480px;
+  }
+}
 .features__section {
   font-size: 14px;
   letter-spacing: 0.03em;
@@ -580,12 +576,10 @@ img {
   font-size: 0;
 }
 .features__list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  margin-bottom: -30px;
 }
-.features__item:not(:last-child) {
-  margin-right: 30px;
+.features__item {
+  margin-bottom: 30px;
 }
 .features__icon-container {
   display: -webkit-box;
@@ -594,7 +588,7 @@ img {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 270px;
+  width: 100%;
   height: 120px;
   background-color: var(--backgroung-team-color);
   margin-bottom: 30px;
@@ -610,12 +604,18 @@ img {
   color: var(--first-color);
   text-transform: uppercase;
   margin-bottom: 10px;
+  text-align: center;
 }
 
 .studio__section {
   font-size: 16px;
   letter-spacing: 0.03em;
   padding-top: 0;
+}
+@media screen and (max-width: 1199px) {
+  .studio__section {
+    display: none;
+  }
 }
 .studio__list {
   display: -webkit-box;
@@ -663,26 +663,33 @@ img {
   background-color: var(--backgroung-team-color);
   text-align: center;
 }
+@media screen and (min-width: 480px) {
+  .team__container {
+    max-width: 480px;
+  }
+}
 .team__list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  margin-bottom: -30px;
 }
 .team__title {
   color: var(--first-color);
-  font-size: 36px;
   font-weight: 700;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
   text-align: center;
+  font-size: 28px;
+}
+@media screen and (min-width: 1200px) {
+  .team__title {
+    font-size: 36px;
+    margin-bottom: 50px;
+  }
 }
 .team__item {
   background: var(--while-color);
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
-}
-.team__item:not(:last-child) {
-  margin-right: 30px;
+  margin-bottom: 30px;
 }
 .team__item-container {
   padding: 30px 32px;
@@ -704,16 +711,26 @@ img {
   color: var(--first-color);
   font-size: 36px;
   font-weight: 700;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
   text-align: center;
 }
-.clients__list {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
+@media screen and (min-width: 1200px) {
+  .clients__title {
+    margin-bottom: 50px;
+  }
 }
-.clients__list :not(:last-child) {
-  margin-right: 30px;
+.clients__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-left: -30px;
+  margin-bottom: -30px;
+}
+.clients__item {
+  margin-left: 30px;
+  margin-bottom: 30px;
 }
 .clients__link {
   display: -webkit-box;
@@ -722,13 +739,18 @@ img {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 170px;
   height: 92px;
   color: var(--icon-color);
   border: 1px solid var(--icon-color);
   border-radius: 4px;
   -webkit-transition: color 250ms var(--timing-function), border-color 250ms var(--timing-function);
   transition: color 250ms var(--timing-function), border-color 250ms var(--timing-function);
+  width: calc(100vw / 2 - 30px);
+}
+@media screen and (min-width: 768px) {
+  .clients__link {
+    width: calc(100vw / 3 - 30px);
+  }
 }
 .clients__link:hover, .clients__link:focus {
   border-color: var(--accent-color);
@@ -772,22 +794,33 @@ img {
   line-height: 1.714;
   padding: 60px 0;
 }
-.footer__container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: baseline;
-      -ms-flex-align: baseline;
-          align-items: baseline;
+@media screen and (min-width: 768px) {
+  .footer__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+  }
 }
 
 .logo--footer {
   margin-bottom: 20px;
 }
-
 .socialmedia--footer {
-  margin-left: 0;
-  margin-right: 93px;
+  margin-bottom: 60px;
+}
+@media screen and (min-width: 1200px) {
+  .socialmedia--footer {
+    margin-left: 0;
+    margin-right: 93px;
+  }
 }
 
 .socialmedia__title--footer {
@@ -796,6 +829,11 @@ img {
   font-weight: bold;
   letter-spacing: 0.03em;
   margin-bottom: 20px;
+}
+@media screen and (max-width: 1199px) {
+  .socialmedia__title--footer {
+    text-align: center;
+  }
 }
 
 .socialmedia__link--footer {
@@ -809,10 +847,24 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+@media screen and (min-width: 768px) {
+  .form--footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
 
 .address-box {
-  margin-right: 70px;
+  margin-bottom: 60px;
 }
 
 .address {
@@ -820,6 +872,11 @@ img {
 }
 .address__item {
   margin-bottom: 9px;
+}
+@media screen and (max-width: 767px) {
+  .address__item {
+    text-align: center;
+  }
 }
 .address__link {
   color: var(--adress-link-color);
@@ -847,8 +904,13 @@ img {
   -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0);
           box-shadow: 0px 4px 4px rgba(0, 0, 0, 0);
 }
+.submit__label {
+  display: block;
+  margin-bottom: 20px;
+}
 .submit__input {
-  width: 370px;
+  width: calc(100vw - 30px);
+  max-width: 450px;
   height: 50px;
   border-radius: 4px;
   border-color: rgba(255, 255, 255, 0.3);
@@ -857,7 +919,6 @@ img {
   font-size: 16px;
   color: var(--adress-link-color);
   vertical-align: middle;
-  margin-right: 12px;
 }
 .submit__input:focus, .submit__input:hover {
   color: var(--while-color);
@@ -867,6 +928,11 @@ img {
   font-size: 14px;
   font-weight: bold;
   margin-bottom: 20px;
+}
+@media screen and (max-width: 1199px) {
+  .submit__title {
+    text-align: center;
+  }
 }
 .submit__post {
   position: relative;
@@ -1193,7 +1259,6 @@ img {
 .card__link:hover .card__overlay, .card__link:focus .card__overlay {
   -webkit-transform: translateY(-100%);
           transform: translateY(-100%);
-<<<<<<< Updated upstream
 }
 
 .menu-container {
@@ -1223,7 +1288,6 @@ img {
   transition: transform 250ms var(--timing-function);
   transition: transform 250ms var(--timing-function), -webkit-transform 250ms var(--timing-function);
 }
-
 .menu-container.is-open {
   -webkit-transform: translateX(0);
           transform: translateX(0);
@@ -1258,43 +1322,36 @@ img {
     display: none;
   }
 }
-
 .mobile__menu-link {
   font-size: 40px;
   font-weight: 500;
   color: var(--first-color);
   margin-bottom: 32px;
 }
-
 .mobile__tel {
   font-size: 8vw;
   font-weight: 500;
   color: var(--accent-color);
   margin-bottom: 32px;
 }
-
 .mobile__email {
   font-size: 24px;
   font-weight: 500;
   margin-bottom: 48px;
 }
-
 .mobile__socialmedia-list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
-
 .mobile__socialmedia-link {
   font-size: 4vw;
   font-weight: 500;
   color: var(--accent-color);
 }
-
 .mobile__socialmedia-item:not(:first-child) {
   padding-left: 10px;
 }
-
 .mobile__socialmedia-item:not(:last-child) {
   padding-right: 10px;
   border-right: solid 1px var(--second-color);
@@ -1311,8 +1368,4 @@ img {
 .mobile__email:focus,
 .mobile__email:active {
   color: var(--accent-color);
-}
-/*# sourceMappingURL=main.css.map */
-=======
 }/*# sourceMappingURL=main.css.map */
->>>>>>> Stashed changes

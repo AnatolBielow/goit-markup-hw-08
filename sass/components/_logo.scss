@@ -4,13 +4,18 @@
     font-size: 26px;
     font-weight: 700;
     letter-spacing: 0.03em;
+
+@media screen and (max-width: 768px) 
+{ 
+     text-align: center;
+}
  
 }
 
 .logo--header {
     padding-top: 15px;
     padding-bottom: 15px;
-    margin-right: auto;
+    // margin-right: auto;
 }
 .logo__mod--header {
     color: var(--logo-header-color);
