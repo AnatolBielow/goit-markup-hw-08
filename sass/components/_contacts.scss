@@ -1,19 +1,39 @@
 .contacts {
 
-
+    
 &__list {
     display: flex;
+    flex-direction: column;
+
+    @media screen and (min-width: 1200px)
+    {
+        
+      font-size: 14px;
+      flex-direction: row;
+    }
+    
 }
 
 &__list :not(:last-child) {
-    margin-right: 30px;
+    
+    margin-bottom: 10px;
+    @media screen and (min-width: 1200px) {
+        margin-bottom: 0;
+        margin-right: 30px;
+    }
 
 }
 &__link {
     display: flex;
-    padding: 32px 0;
+    font-size: 12px;
     color: var(--second-color);
     transition: color 250ms var(--timing-function);
+    
+
+    @media screen and (min-width: 1200px) {
+        font-size: 14px;
+        padding: 32px 0;
+    }
 }
 
 &__icon {

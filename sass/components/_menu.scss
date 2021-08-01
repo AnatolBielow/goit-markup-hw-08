@@ -1,11 +1,13 @@
 .menu {
         display: flex;
     align-items: center;
+    margin-right: auto;
 
 
-// &__list {
-//     display: flex;
-// }
+&__list {
+    display: flex;
+    margin-left: 88px;
+}
 
 &__list :not(:last-child) {
     margin-right: 50px;

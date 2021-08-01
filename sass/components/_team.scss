@@ -6,13 +6,7 @@
     background-color: var(--backgroung-team-color);
     text-align: center;
  }
- &__container {
 
-    @media screen and (min-width: 480px)
-    {
-        max-width: 480px;
-    } 
-} 
 &__list {
     margin-bottom: -30px;
     margin-left: -30px;
@@ -47,6 +41,12 @@
     @media screen and (min-width: 768px) {
         max-width: 354px;
     }
+
+    @media screen and (min-width: 1200px) {
+        max-width: 270px;
+    }
+        
+    
 }
 // &__item:not(:last-child) {
 //     margin-right: 30px;

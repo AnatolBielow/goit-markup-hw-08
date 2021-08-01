@@ -1,8 +1,12 @@
 .address-box {
-  margin-bottom: 60px;
+    margin-bottom: 60px;
+    text-align: center;
       
-  
-// //     margin-right: 70px;
+     @media screen and (min-width: 1200px) {
+    text-align: start;
+    margin-bottom: 0;
+    margin-right: 70px;
+}   
 }
 
 .address {
@@ -15,9 +19,7 @@
 &__item {
     margin-bottom: 9px;
 
-    @media screen and (max-width: 767px) {
-    text-align: center;
-}
+ 
 }
 
 

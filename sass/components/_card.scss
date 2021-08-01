@@ -4,18 +4,36 @@
 &__list {
     display: flex;
     flex-wrap: wrap;
+    height: 100%;
     margin: 0;
     padding: 0;
-    margin-left: calc( -1 * var(--card-set-gap));
-    margin-top: calc( -1 * var(--card-set-gap));
+    margin-bottom: -30px;
+    margin-left: -30px;
+    margin-top: 40px;
 
+    @media screen and (min-width: 768px) {
+        margin-top: 30px;
+    }
+
+    @media screen and (min-width: 1200px) {
+        margin-top: 50px;
+    }
 }
 
 &__list > &__item {
     
-    width: 370px;
-    margin-left: var(--card-set-gap);
-    margin-top: var(--card-set-gap);
+    width: 100%;
+    max-width: 450px;
+    margin-left: 30px;
+    margin-bottom: 30px;
+
+    @media screen and (min-width: 768px) {
+        max-width: 354px;
+    }
+
+    @media screen and (min-width: 1200px) {
+        max-width: 370px;
+    }
 }
 
 &__title {
@@ -26,6 +44,7 @@
     letter-spacing: 0.06em;
 }
 &__content {
+    flex-grow: 1;
     padding: 20px 24px;
     border-left: 1px solid var(--border-color);
     border-right: 1px solid var(--border-color);
@@ -38,7 +57,7 @@
 }
 
 &__overlay {
-    width: 370px;
+    width: 100%;
     height: 100%;
     font-size: 18px;
     line-height: 1.555;
@@ -51,8 +70,19 @@
     
 }
 &__link {
-    
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
     transition: box-shadow 250ms var(--timing-function);
+
+    @media screen and (min-width: 768px) {
+        width: 354px;
+    }
+    @media screen and (min-width: 1200px) {
+        width: 370px;
+    }
+
 }
 &__link:hover,
 &__link:focus {
