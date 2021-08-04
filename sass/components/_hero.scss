@@ -2,22 +2,61 @@
 
 &__section {
     margin: 0 auto;
-    background-image: linear-gradient( to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4) ), url(../images/background.jpg);
-    padding-top: 200px;
-    padding-bottom: 200px;
+    background-image: linear-gradient( to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4) ), url(../images/background/background-smartphone.jpg);
+    background-size: 480px 400px;
+    padding-top: 118px;
     color: var(--first-color);
     text-align: center;
+    
     font-size: 36px;
     font-weight: 700;
+    max-width: 480px;
+    min-height: 400px;
+
+    @media screen and (min-device-pixel-ratio: 2) and (min-width: 280px),
+    screen and (min-resolution: 192dpi) and (min-width: 280px),
+    screen and (min-resolution: 2dppx) and (min-width:280px) {
+        background-image: linear-gradient( to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4) ), url(../images/background/background-smartphone@2x.jpg);
+
+    }
+
+    @media screen and (min-width: 768px) {
+        background-image: linear-gradient( to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4) ), url(../images/background/background-tablet.jpg);
+        max-width: 768px;
+        background-size: 768px 400px;
+    }
+
+    @media screen and (min-device-pixel-ratio: 2) and (min-width: 768px),
+    screen and (min-resolution: 192dpi) and (min-width: 768px),
+    screen and (min-resolution: 2dppx) and (min-width:768px) {
+        background-image: linear-gradient( to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4) ), url(../images/background/background-tablet@2x.jpg);
+
+    }
+    @media screen and (min-width: 1200px) {
+        background-image: linear-gradient( to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4) ), url(../images/background/background-desktop.jpg);
+        background-size: 1600px 600px;
+        max-width: 1600px;
+        padding-top: 200px;
+        padding-bottom: 200px;
+    }
+    @media screen and (min-device-pixel-ratio: 2) and (min-width: 1200px),
+    screen and (min-resolution: 192dpi) and (min-width: 1200px),
+    screen and (min-resolution: 2dppx) and (min-width:1200px) {
+        background-image: linear-gradient( to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4) ), url(../images/background/background-desktop@2x.jpg);
+
+    }
 }
 &__content {
    
     color: var(--while-color);
     margin: 0 auto;
-@media screen and (min-width: 1200px)
-{
-    width: 660px;
-}
+
+    @media screen and (min-width: 768px) {
+        width: 360px;
+    }    
+    @media screen and (min-width: 1200px) {
+        width: 660px;
+    }
 }
 &__title {
     font-size: 24px;
